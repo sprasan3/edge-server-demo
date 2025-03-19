@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Config Adaptation Demo</title>
+</head>
+<body>
+    <h1>Config Adaptation Demo</h1>
+    <div class="video-container">
+        <video id="video1" controls></video>
+        <video id="video2" controls></video>
+        <video id="video3" controls></video>
+        <video id="video4" controls></video>
+    </div>
+
+    <div class="config-section">
+        <h2>Adjust Configuration</h2>
+        <label for="offload">Offload Point:</label>
+        <select id="offload">
+            <option value="2">2</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="codebook">Codebook Size:</label>
+        <select id="codebook">
+            <option value="16">16</option>
+            <option value="32">32</option>
+        </select>
+
+        <label for="encoder">Encoder:</label>
+        <select id="encoder">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+        </select>
+
+        <button onclick="applyConfig()">Apply Configuration</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

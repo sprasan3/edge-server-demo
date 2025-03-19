@@ -1,0 +1,5 @@
+{
+    "offload": "2",
+    "codebook": "16",
+    "encoder": "present"
+}
