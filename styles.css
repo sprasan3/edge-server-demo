@@ -1,37 +1,104 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-.video-container {
+    margin: 0;
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff;
+    /* padding-top: 50px;
+    padding-bottom: 100px; */
 }
 
-video {
-    width: 20%;
-    border: 2px solid #333;
+#video-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; 
+    width: 1000px;
+    height: 450px;
+    margin: auto;
+    justify-content: left;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.config-section {
+#video-player {
+    width: 700px;
+    height: 450px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+h1 {
     text-align: center;
-    margin: 20px 0;
+    color: #000000;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+.config-container {
+    display: flex;  /* Create a flexible layout */
+    justify-content: space-between;  /* Space between the left and right blocks */
+    gap: 20px; 
 }
 
-button:hover {
-    background-color: #0056b3;
+.config-inputs {
+    display: flex;
+    flex-direction: column; /* Stack the fields vertically */
+    gap: 20px; 
+    width: 50%;
+    /* margin-left: 80px; 
+    margin-bottom: 20px; */
+    border: 2px solid #ccc; /* Border around the config-options */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color for the box */
+}
+
+.config-options {
+    display: flex;
+    flex-direction: column; /* Stack the options vertically */
+    gap: 20px; 
+    width: 45%;
+    /* margin-right: 20px;
+    margin-bottom: 20px; */
+    border: 2px solid #ccc; /* Border around the config-options */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color for the box */
+}
+
+.pred {
+    border: 2px solid #ccc; /* Border around the config-options */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    width: 20%;
+    gap: 20px; 
+    background-color: #f9f9f9; /* Light background color for the box */
+}
+
+.edge {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ccc; /* Border around the config-options */
+    padding: 15px; /* Padding inside the box */
+    width: 30%;
+    /* margin-left: 200px; */
+    gap: 20px; 
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color for the box */
+}
+
+.server {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ccc; /* Border around the config-options */
+    padding: 15px; /* Padding inside the box */
+    width: 30%;
+    /* margin-right: 200px; */
+    gap: 20px; 
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color for the box */
 }

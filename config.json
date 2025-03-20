@@ -1,5 +1,28 @@
 {
-    "offload": "2",
-    "codebook": "16",
-    "encoder": "present"
+  "videos": [
+    {
+      "id": 1,
+      "title": "Video 1",
+      "description": "This is the first video.",
+      "duration": "3:00"
+    },
+    {
+      "id": 2,
+      "title": "Video 2",
+      "description": "This is the second video.",
+      "duration": "2:30"
+    },
+    {
+      "id": 3,
+      "title": "Video 3",
+      "description": "This is the third video.",
+      "duration": "4:00"
+    },
+    {
+      "id": 4,
+      "title": "Video 4",
+      "description": "This is the fourth video.",
+      "duration": "5:00"
+    }
+  ]
 }

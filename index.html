@@ -3,44 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <title>Config Adaptation Demo</title>
+    <title>Video Prediction Dashboard</title>
+    <style>
+        .container {
+          display: flex;
+          justify-content: space-between; /* Optional: for spacing between items */
+          align-items: center; /* Optional: to vertically center items */
+        }
+    
+        .item {
+          width: 30%; /* Adjust size of each item */
+          padding: 10px;
+          border: 1px solid black;
+          box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    <h1>Config Adaptation Demo</h1>
-    <div class="video-container">
-        <video id="video1" controls></video>
-        <video id="video2" controls="" width="800" height="500" muted="" loop="" autoplay="">
-            <source src="https://https://github.com/sprasan3/edge-server-demo/video2.mp4" type="video/mp4">
-        </video>
-        <video id="video3" controls></video>
-        <video id="video4" controls></video>
+    <div class="main">
+        <h1>Edge-Server Demo</h1>
+        <div id="video-container">
+            <div class="video">
+                <video id="video-player" controls autoplay></video>
+            </div>
+            <div class="pred">
+                <h3 style="text-align: center;">Predictions</h3>
+                <ol id="prediction"> </ol>
+                <p style="font-weight: bold;">E2E Latency: <span id="e2e-latency">--</span></p>
+            </div> 
+        </div>
+        
+        <!-- <h2 style="text-align: center;">Configuration</h2> -->
+        <div class="config-container">
+            <div class="config-inputs">  
+                <h3 style="text-align: center;">Configuration Inputs</h3> 
+                <label for="bandwidth">Bandwidth (Mbps):</label>
+                <select id="bandwidth">
+                    <option value="25">25</option>
+                    <option value="6">6</option>
+                    <option value="3">3</option>
+                </select>
+                <label>Min Accuracy (65-75%): <input type="number" id="min-accuracy" value="75"></label>
+                <label>Max E2E Latency (800-900ms): <input type="number" id="max-latency" value="900"></label>
+                <button onclick="updateConfig()">Update Config</button>
+            </div>      
+
+            <div class="config-options">
+                <h3 style="text-align: center;">Chosen Config</h3> 
+                <p style="font-size: 16px; font-weight: bold;" id="claim"></p>
+                <p>Codebook Size: <span id="codebook-size">--</span></p>
+                <p>Encoder: <span id="encoder">--</span></p>
+                <p>Offloading Point: <span id="offload-point">--</span></p>
+            </div>
+            
+            <!-- <h2 style="text-align: center;">Results</h2> -->
+            <div class="edge">
+                <h3 style="text-align: center;">Edge Metrics</h3>
+                <p>Bandwidth (mbps): <span id="edge-bw"> --</span></p>
+                <p>Latency (ms): <span  id="edge-lat"> --</span></p>
+                <p>Memory (%): <span  id="edge-mem"> --</span></p>
+            </div>
+
+            <div class="server">
+                <h3 style="text-align: center;">Server Metrics</h3>
+                <p>Latency (ms): <span id="server-lat">--</span> </p>
+                <p>Memory (%): <span   id="server-mem">--</span> </p>
+                <p>Overhead (ms): <span id="server-overhead"> --</span></p>
+            </div>
+        </div>
+        
     </div>
-
-    <div class="config-section">
-        <h2>Adjust Configuration</h2>
-        <label for="offload">Offload Point:</label>
-        <select id="offload">
-            <option value="2">2</option>
-            <option value="4">4</option>
-        </select>
-
-        <label for="codebook">Codebook Size:</label>
-        <select id="codebook">
-            <option value="16">16</option>
-            <option value="32">32</option>
-        </select>
-
-        <label for="encoder">Encoder:</label>
-        <select id="encoder">
-            <option value="present">Present</option>
-            <option value="absent">Absent</option>
-        </select>
-
-        <button onclick="applyConfig()">Apply Configuration</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
