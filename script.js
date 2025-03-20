@@ -1,4 +1,4 @@
-const videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"];
+const videos = ["./video1.mp4", "./video2.mp4", "./video3.mp4", "./video4.mp4"];
 let currentVideo = 0;
 
 async function loadData() {
