@@ -1,4 +1,4 @@
-const videos = ["./video1.mp4", "./video2.mp4", "./video3.mp4", "./video4.mp4"];
+const videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"];
 let currentVideo = 0;
 
 async function loadData() {
@@ -1328,10 +1328,17 @@ function updatePrediction(currentVideo) {
         if (config.bandwidth == 3) {video = bw3_5_options[index];}
     }
 
+    index = 0;
     predictionElement.innerHTML = '';
     video.predictions.forEach(prediction => {
         const listItem = document.createElement("li");
         listItem.textContent = prediction; // Set the text of the list item
+
+        if (index === 0) {
+            listItem.style.fontWeight = 'bold'; // Make the text bold
+            listItem.style.color = 'green'; // Change text color to green
+        }
+        index +=1;
         predictionElement.appendChild(listItem); // Add the list item to the list
     });
 
