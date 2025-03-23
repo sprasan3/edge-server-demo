@@ -5,8 +5,8 @@ body {
     align-items: center;
     height: 100vh;
     background: #ffffff;
-    /* padding-top: 50px;
-    padding-bottom: 100px; */
+    padding-top: 250px;
+    padding-bottom: 300px;
 }
 
 #video-container {
@@ -22,6 +22,26 @@ body {
     border: 2px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
+}
+
+#video-container-1 {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    /* justify-content: left; */
+    align-items: center;
+    background: #413b3b;
+    border: 2px solid #413b3b;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#video-player-1 {
+    width: 750px;
+    height: 450px;
+    object-fit:scale-down;
+    align-items: center;
+    margin-left: 110px;
 }
 
 #video-player {

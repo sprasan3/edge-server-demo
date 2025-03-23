@@ -1104,6 +1104,16 @@ document.addEventListener("DOMContentLoaded", () => {
     updateConfigUI();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const videoPlayer = document.getElementById("video-player-1");
+    videoPlayer.src = "edge-server-demo.mp4"
+
+    videoPlayer.onended = () => {
+        videoPlayer.src = "edge-server-demo.mp4"
+        videoPlayer.play();
+    };
+});
+
 // const bandwidthSelect = document.getElementById("bandwidth");
 
 // bandwidthSelect.addEventListener("change", () => {
